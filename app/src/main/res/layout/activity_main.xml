@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:id="@+id/toolbar"
+        app:title="Home"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/cartLyt"
+        >
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/no_profile_pic"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginEnd="0dp"-->
+<!--            android:id="@+id/imgProfile"-->
+<!--            app:civ_border_width="1dp"-->
+<!--            app:civ_border_color="@android:color/holo_red_light"-->
+<!--            />-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart_icon"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:layout_width="20sp"
+            android:layout_height="20dp"
+            android:text=""
+            android:layout_marginStart="15dp"
+            android:background="@drawable/circle_bg"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/cartItemCount"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Categories"-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Headline"-->
+<!--                android:padding="5dp"-->
+<!--                />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="3"-->
+<!--                >-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/fruitsLyt"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="@drawable/txt_bg"-->
+<!--                    android:padding="10dp"-->
+<!--                    >-->
+
+
+<!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/fruits"-->
+<!--                        app:civ_border_color="#FF9900"-->
+<!--                        app:civ_border_width="1dp"-->
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Fruits"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"-->
+<!--                        />-->
+
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/vegetablesLyt"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    android:background="@drawable/txt_bg"-->
+<!--                    android:padding="10dp"-->
+<!--                    >-->
+
+
+<!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/vegitables"-->
+<!--                        app:civ_border_color="#FF9900"-->
+<!--                        app:civ_border_width="1dp"-->
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Vegetables"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"-->
+<!--                        />-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/grainsLyt"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    android:background="@drawable/txt_bg"-->
+<!--                    android:padding="10dp"-->
+<!--                    >-->
+
+
+<!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/grains"-->
+<!--                        app:civ_border_color="#FF9900"-->
+<!--                        app:civ_border_width="1dp"-->
+<!--                        />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Grains"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"-->
+<!--                        />-->
+
+
+<!--                </LinearLayout>-->
+
+
+
+
+
+
+
+
+
+<!--            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For You"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:padding="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+
+                >
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/holo_red_light"
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    />
+
+<!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                    android:id="@+id/fab"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end|bottom"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginLeft="50dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginBottom="16dp" />-->
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/fab"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="end|bottom"-->
+<!--                android:layout_margin="16dp"/>-->
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
