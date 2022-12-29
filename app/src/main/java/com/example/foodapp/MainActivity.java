@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity implements ICartLoadListener
 
         binding.cartLyt.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
 
+        binding.imgProfile.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, OptionsActivity.class)));
+
         binding.progressBar.setVisibility(View.VISIBLE);
         binding.recyclerView.setHasFixedSize(true);
 

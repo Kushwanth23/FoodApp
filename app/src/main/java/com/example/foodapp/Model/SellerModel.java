@@ -1,10 +1,11 @@
+//Kushwanth23
 package com.example.foodapp.Model;
 
 import com.firebase.ui.auth.data.model.User;
 
 public class SellerModel {
 
-    String username,emil,phone,image,uid;
+    String username,emil,phone,image,uid,sellerName;
 
     public SellerModel(){}
 
@@ -47,5 +48,9 @@ public class SellerModel {
     public void setUid(String uid) {
         this.uid = uid;
     }
+
+    public String getSellerName() { return sellerName; }
+
+    public void setSellerName(String sellerName) { this.sellerName = sellerName; }
 
 }

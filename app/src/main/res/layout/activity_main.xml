@@ -18,8 +18,10 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+
+
     <RelativeLayout
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="10dp"
@@ -27,24 +29,25 @@
         android:id="@+id/cartLyt"
         >
 
-<!--        <de.hdodenhof.circleimageview.CircleImageView-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:src="@drawable/no_profile_pic"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginEnd="0dp"-->
-<!--            android:id="@+id/imgProfile"-->
-<!--            app:civ_border_width="1dp"-->
-<!--            app:civ_border_color="@android:color/holo_red_light"-->
-<!--            />-->
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cart_icon"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/placeholder"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/imgProfile"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@android:color/holo_red_light"
             />
 
         <TextView
@@ -61,11 +64,6 @@
             android:visibility="gone"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             />
-
-
-
-
-
 
     </RelativeLayout>
 

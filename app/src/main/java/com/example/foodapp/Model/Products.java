@@ -3,12 +3,15 @@ package com.example.foodapp.Model;
 
 public class Products {
 
-    String name,id,description,category,quantity,image;
+    String name,id,description,category,quantity,image,sellername,publisher;
     Integer price;
     Boolean stock;
 
     public Products(){}
 
+    public String getSellername() { return sellername; }
+
+    public void setSellername(String sellername) { this.sellername = sellername; }
 
     public String getName() {
         return name;
@@ -73,5 +76,13 @@ public class Products {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 }

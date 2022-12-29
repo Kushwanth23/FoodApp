@@ -43,6 +43,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="15dp"
+                    android:id="@+id/cartLyt"
                     >
 
                     <ImageView
@@ -154,9 +155,9 @@
                 />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Seller Name:"
+                android:text="Seller :"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
@@ -168,10 +169,10 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"                tools:text="Mobiles"
+                android:layout_marginEnd="5dp"                tools:text="Bindu"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#CC000000"
-                android:id="@+id/sellerName"
+                android:id="@+id/txtSeller"
                 />
 
             <TextView

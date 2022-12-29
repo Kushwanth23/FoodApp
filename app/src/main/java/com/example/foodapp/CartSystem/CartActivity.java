@@ -1,9 +1,13 @@
+//Kushwanth23
 package com.example.foodapp.CartSystem;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -19,6 +23,7 @@ import com.example.foodapp.Model.CartModel;
 import com.example.foodapp.Model.OrderModel;
 import com.example.foodapp.Model.Products;
 import com.example.foodapp.Model.UserModel;
+import com.example.foodapp.PaymentActivity;
 import com.example.foodapp.R;
 import com.example.foodapp.databinding.ActivityCartBinding;
 import com.example.foodapp.databinding.DialogueDdressBinding;
@@ -252,7 +257,10 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
                         progressDialog.dismiss();
                         reference.child("Cart").child(user.getUid())
                                 .removeValue();
-                        finish();
+                        //finish();
+//                        Intent intent = new Intent(CartActivity.this, PaymentActivity.class);
+//                        startActivity(intent);
+                        sendMessage("9701186388");
                         Toast.makeText(CartActivity.this, "Order has been sent!", Toast.LENGTH_SHORT).show();
                     }else {
                         progressDialog.dismiss();
@@ -266,6 +274,30 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
 
 
 
+    }
+
+    private void sendMessage(String phoneNumber){
+        PackageManager pm=getPackageManager();
+
+        String number;
+
+        if (phoneNumber.startsWith("+91")){
+            number = phoneNumber;
+        }else {
+            number = "+91"+phoneNumber;
+        }
+
+        String message = "*GRIHASTA HOME FOODS*\n" +
+                "Amount of "+sum+" has paid";
+
+        startActivity(
+                new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(
+                                String.format("https://api.whatsapp.com/send?phone=%s&text=%s",
+                                        number, message)
+                        )
+                )
+        );
     }
 
     private void getUserData(){

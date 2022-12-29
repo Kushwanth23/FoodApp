@@ -1,3 +1,4 @@
+//Kushwanth23
 package com.example.foodapp;
 
 import android.content.Context;
@@ -49,7 +50,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         binding.productTitle.setText(model.getName());
         binding.amount.setText("₹"+model.getPrice()+".0");
         try{
-            Picasso.get().load(model.getImage()).placeholder(R.drawable.food1)
+            Picasso.get().load(model.getImage()).placeholder(R.drawable.foodimage)
                     .into(binding.productImage);
         }catch (Exception e){
             e.getMessage();

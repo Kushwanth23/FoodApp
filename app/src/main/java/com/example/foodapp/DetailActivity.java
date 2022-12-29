@@ -3,6 +3,7 @@ package com.example.foodapp;
 
 import static com.example.foodapp.ItemAdapter.productsList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.foodapp.CartSystem.CartActivity;
 import com.example.foodapp.Listeners.ICartLoadListener;
 import com.example.foodapp.Listeners.MyUpdateCartEvent;
 import com.example.foodapp.Model.CartModel;
@@ -42,8 +44,6 @@ public class DetailActivity extends AppCompatActivity implements ICartLoadListen
     public static final String TAG="Database";
 
     ActivityDetailBinding binding;
-
-    SellerModel sellerModel;
 
     Products model;
     int position;
@@ -97,6 +97,8 @@ public class DetailActivity extends AppCompatActivity implements ICartLoadListen
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         binding.toolbar.setNavigationOnClickListener(v -> finish());
 
+        binding.cartLyt.setOnClickListener(v -> startActivity(new Intent(DetailActivity.this, CartActivity.class)));
+
 
         getProductsDat();
         getUserData();
@@ -126,8 +128,11 @@ public class DetailActivity extends AppCompatActivity implements ICartLoadListen
 
 
                         }
+
                         binding.name.setText(model.getName());
                         binding.price.setText("₹"+model.getPrice()+".0");
+
+                        binding.txtSeller.setText("Bindu");
 
                         binding.description.setText(model.getDescription());
 
@@ -281,6 +286,8 @@ public class DetailActivity extends AppCompatActivity implements ICartLoadListen
         model.setImage(list.get(0).getLinks());
         model.setPrice(products.getPrice());
         model.setTotalPrice(products.getPrice());
+        model.setPublisher(products.getPublisher());
+
 
 
 
